@@ -8,7 +8,7 @@ module GameAction
       calculate_outcome
     end
 
-    def commentary
+    def print_commentary_text
       p "#{@non_possession_team[:name]} with the tackle!"
     end
 

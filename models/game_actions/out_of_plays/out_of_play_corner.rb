@@ -9,7 +9,7 @@ module GameAction
       terminate_sequence(@outcome)
     end
 
-    def commentary
+    def print_commentary_text
       p "Ball goes out of play. Corner to #{@possession_team[:name]} "
     end
 

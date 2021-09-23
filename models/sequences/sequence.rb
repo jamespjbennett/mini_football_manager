@@ -28,12 +28,12 @@ class Sequence
 
   def instantiate_start_action
     return kick_off unless @new_action
-    GameAction::GameActionOutcomes.send(@new_action).new(@possession_team, @non_possession_team, self)
+    GameAction::GameActionOutcomes.send(@new_action).new(@possession_team, @non_possession_team, self, false)
   end
 
 
   def kick_off
-    GameAction::GameActionOutcomes.kick_off.new(@possession_team, @non_possession_team, self)
+    GameAction::GameActionOutcomes.kick_off.new(@possession_team, @non_possession_team, self, false)
   end
 
   def possession_team

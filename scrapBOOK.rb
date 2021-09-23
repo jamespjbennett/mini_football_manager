@@ -5,8 +5,7 @@ teams = TeamData::teams
 team1 = teams.sample
 team2 = teams.sample
 s = Sequence.new(team1, team2)
-10.times do |i|
-  p "new sequence #{i}"
+108.times do |i|
   s.play
   new_action = s.new_action
   possession_team = s.possession_team

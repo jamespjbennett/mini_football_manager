@@ -12,7 +12,7 @@ class GoalKick < GameAction
     @outcome.play
   end
 
-  def commentary
+  def print_commentary_text
     p "#{@possession_team[:name]} take the goal kick"
   end
 

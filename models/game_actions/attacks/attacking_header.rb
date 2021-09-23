@@ -8,7 +8,7 @@ module GameAction
       calculate_outcome
     end
 
-    def commentary
+    def print_commentary_text
       p "Attacking header by #{@possession_team[:name]}"
     end
 

@@ -8,7 +8,7 @@ module GameAction
       calculate_outcome
     end
 
-    def commentary
+    def print_commentary_text
       p "#{@possession_team[:name]} controlls the ball"
     end
 

@@ -7,7 +7,7 @@ module GameAction
       calculate_outcome
     end
 
-    def commentary
+    def print_commentary_text
       p "shot by #{@possession_team[:name]}.."
     end
 
