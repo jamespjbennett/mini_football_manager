@@ -10,6 +10,7 @@ class Sequence
     @non_possession_team = non_possession_team
     @in_play = true
     @new_action = new_action
+    @actions = []
   end
 
   def play
@@ -18,12 +19,18 @@ class Sequence
       current_action.play
       @new_action = current_action.outcome
       @possession_team, @non_possession_team = current_action.possession_team, current_action.non_possession_team
+      log_action(current_action)
     end
   end
 
   def terminate(updated_new_action)
     @new_action = updated_new_action
     @in_play = false
+  end
+
+  def log_action(current_action)
+    @actions.push({team: @possession_team[:name], action: current_action.to_s.scan(/::([^"]*):/).flatten[0].downcase})
+    @actions = @actions
   end
 
   def instantiate_start_action
@@ -46,6 +53,10 @@ class Sequence
 
   def new_action
     @new_action
+  end
+
+  def actions
+    @actions
   end
 
 end
