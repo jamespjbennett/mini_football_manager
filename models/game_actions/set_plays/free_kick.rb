@@ -21,7 +21,7 @@ module GameAction
         :pass => rand * 2.5,
         :cross => rand * 2,
         :shot => rand * 1.5,
-        :goal => rand * 1.5,
+        :goal => rand * 1.25,
         :out_of_play_throw_in => rand * 1.25,
         :out_of_play_goal_kick => rand * 1.75,
       }

@@ -19,12 +19,12 @@ module GameAction
     def outcome_probability
       {
         :ball_interception => rand * 1.5,
-        :pass => rand * 5.5,
+        :pass => rand * 5.75,
         :dribble => rand * 2,
-        :cross => rand * 1,
-        :out_of_play_throw_in => rand * 1.5,
+        :cross => rand * 1.25,
+        :out_of_play_throw_in => rand * 1.55,
         :out_of_play_free_kick_foul => rand * 1.5,
-        :out_of_play_penalty_foul => rand * 0.75
+        :out_of_play_penalty_foul => rand * 0.5
       }
     end
 

@@ -20,7 +20,7 @@ module GameAction
       {
         :clearance => rand * 1.75 ,
         :pass => rand * 1.75,
-        :out_of_play_corner => rand * 1.75,
+        :out_of_play_corner => rand * 2.5,
         :ball_control => rand * 1.25,
         :ball_interception => rand * 1.5,
         :goalkeeper_throw => rand * 1.5,

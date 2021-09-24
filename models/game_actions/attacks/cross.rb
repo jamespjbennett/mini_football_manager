@@ -18,10 +18,11 @@ module GameAction
 
     def outcome_probability
       {
-        :shot => rand * 1,
+        :shot => rand * 1.25,
         :attacking_header => rand * 2,
         :defensive_header => rand * 2.5,
         :ball_interception => rand * 1.5,
+        :out_of_play_corner => rand * 2,
       }
     end
   end

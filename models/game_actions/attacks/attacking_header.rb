@@ -18,9 +18,9 @@ module GameAction
 
     def outcome_probability
       {
-        :goal => rand * 1,
-        :save => rand * 3,
-        :out_of_play_goal_kick => rand * 3,
+        :goal => rand * 1.5,
+        :save => rand * 3.5,
+        :out_of_play_goal_kick => rand * 3.5,
       }
     end
   end
