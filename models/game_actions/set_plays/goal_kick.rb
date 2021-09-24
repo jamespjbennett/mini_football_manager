@@ -20,7 +20,7 @@ module GameAction
       {
         :out_of_play_throw_in => rand * 1.5,
         :header_in_play => rand * 3,
-        :pass => rand * 2,
+        :pass => rand * 2.5,
       }
     end
 

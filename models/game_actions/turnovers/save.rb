@@ -19,7 +19,7 @@ module GameAction
     def outcome_probability
       {
         :clearance => rand * 1.75 ,
-        :pass => rand * 1.25,
+        :pass => rand * 1.75,
         :out_of_play_corner => rand * 1.75,
         :ball_control => rand * 1.25,
         :ball_interception => rand * 1.5,

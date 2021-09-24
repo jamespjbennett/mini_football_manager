@@ -18,7 +18,7 @@ module GameAction
 
     def outcome_probability
       {
-        :pass => rand * 2,
+        :pass => rand * 2.5,
         :cross => rand * 2,
         :shot => rand * 1.5,
         :goal => rand * 1.5,

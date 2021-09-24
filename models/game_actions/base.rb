@@ -8,11 +8,7 @@ module GameAction
     end
 
     def commentary
-      if self.class == GameAction::Goal
-        print_commentary_text
-      else
-        print_commentary_text unless @detailed_commentary == false
-      end
+      print_commentary_text unless @detailed_commentary == false
     end
 
     def terminate_sequence(start_action)
