@@ -27,13 +27,18 @@ end
 
 
 
-p "#{@total_actions.keys.first}:....."
+
+
+
 first_team_actions = @total_actions[@total_actions.keys.first]
-first_team_actions.each do |action,count|
-  p "#{action} : #{count}"
-end
-p "#{@total_actions.keys.last}:....."
 second_team_actions = @total_actions[@total_actions.keys.last]
-second_team_actions.each do |action,count|
-  p "#{action} : #{count}"
-end
+
+p "#{@total_actions.keys.first} #{first_team_actions["goal"]} #{@total_actions.keys.last} #{second_team_actions["goal"]}"
+
+# first_team_actions.each do |action,count|
+#   p "#{action} : #{count}"
+# end
+# p "#{@total_actions.keys.last}:....."
+# second_team_actions.each do |action,count|
+#   p "#{action} : #{count}"
+# end

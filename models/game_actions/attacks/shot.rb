@@ -12,7 +12,15 @@ module GameAction
     end
 
     def calculate_outcome
-      @outcome = [:goal, :save].sample
+      @outcome = outcome_probability.max_by{|outcome,value| value}[0]
+    end
+
+    def outcome_probability
+      {
+        :goal => rand * 1,
+        :save => rand * 3,
+        :out_of_play_goal_kick => rand * 3,
+      }
     end
   end
 end

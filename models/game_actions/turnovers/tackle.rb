@@ -13,7 +13,15 @@ module GameAction
     end
 
     def calculate_outcome
-      @outcome =  [:dribble, :pass, :shot].sample
+      @outcome = outcome_probability.max_by{|outcome,value| value}[0]
+    end
+
+    def outcome_probability
+      {
+        :dribble => rand * 1.75 ,
+        :pass => rand * 2,
+        :shot => rand * 1.25,
+      }
     end
 
   end

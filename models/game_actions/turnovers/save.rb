@@ -13,7 +13,22 @@ module GameAction
     end
 
     def calculate_outcome
-      @outcome = [:shot, :clearance, :pass, :out_of_play_corner, :ball_control, :ball_interception, :goalkeeper_throw, :goalkeeper_in_play_kick].sample
+      @outcome = outcome_probability.max_by{|outcome,value| value}[0]
+    end
+
+    def outcome_probability
+      {
+        :clearance => rand * 1.75 ,
+        :pass => rand * 1.25,
+        :out_of_play_corner => rand * 1.75,
+        :ball_control => rand * 1.25,
+        :ball_interception => rand * 1.5,
+        :goalkeeper_throw => rand * 1.5,
+        :goalkeeper_in_play_kick => rand * 1.75,
+      }
     end
   end
 end
+
+
+# a way to do follow up shot - maybe a rebound class?

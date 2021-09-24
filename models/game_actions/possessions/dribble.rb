@@ -13,8 +13,17 @@ module GameAction
     end
 
     def calculate_outcome
-      @outcome = [:pass, :tackle, :out_of_play_free_kick_foul, :out_of_play_penalty_foul].sample
+      @outcome = outcome_probability.max_by{|outcome,value| value}[0]
     end
 
+    def outcome_probability
+      {
+        :pass => rand * 2.5,
+        :tackle => rand * 2,
+        :cross => rand * 2,
+        :out_of_play_free_kick_foul => rand * 1.75,
+        :out_of_play_penalty_foul => rand * 1.25,
+      }
+    end
   end
 end

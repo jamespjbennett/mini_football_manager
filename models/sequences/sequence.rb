@@ -17,9 +17,9 @@ class Sequence
     until @in_play == false
       current_action = instantiate_start_action
       current_action.play
+      log_action(current_action)
       @new_action = current_action.outcome
       @possession_team, @non_possession_team = current_action.possession_team, current_action.non_possession_team
-      log_action(current_action)
     end
   end
 

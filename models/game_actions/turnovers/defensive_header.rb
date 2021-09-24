@@ -13,7 +13,18 @@ module GameAction
     end
 
     def calculate_outcome
-      @outcome = [:ball_interception, :ball_control, :header_in_play, :shot].sample
+      @outcome = outcome_probability.max_by{|outcome,value| value}[0]
+    end
+
+    def outcome_probability
+      {
+        :ball_interception => rand * 1,
+        :ball_control => rand * 1,
+        :header_in_play => rand * 1,
+      }
     end
   end
 end
+
+
+# a way to immediately swap possession team to have a follow up shot?

@@ -21,7 +21,16 @@ module GameAction
     end
 
     def calculate_outcome
-      @outcome = [:header_in_play, :out_of_play_throw_in, :ball_interception, :ball_control].sample
+      @outcome = outcome_probability.max_by{|outcome,value| value}[0]
+    end
+
+    def outcome_probability
+      {
+        :header_in_play => rand * 1.5,
+        :out_of_play_throw_in => rand * 1.5,
+        :ball_interception => rand * 2,
+        :ball_control => rand * 2.5,
+      }
     end
 
   end
