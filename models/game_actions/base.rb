@@ -19,6 +19,10 @@ module GameAction
       @sequence.terminate(start_action)
     end
 
+    def swap_possession_team
+      @non_possession_team, @possession_team = @possession_team, @non_possession_team
+    end
+
     def outcome
       @outcome
     end

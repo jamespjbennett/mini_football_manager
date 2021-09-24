@@ -12,10 +12,6 @@ module GameAction
       p "#{@non_possession_team[:name]} with the defensive header"
     end
 
-    def swap_possession_team
-      @non_possession_team, @possession_team = @possession_team, @non_possession_team
-    end
-
     def calculate_outcome
       @outcome = [:ball_interception, :ball_control, :header_in_play, :shot].sample
     end

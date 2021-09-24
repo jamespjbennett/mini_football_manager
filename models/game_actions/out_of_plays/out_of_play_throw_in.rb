@@ -14,10 +14,6 @@ module GameAction
       p "Ball goes out of play. Throw in to #{@possession_team[:name]} "
     end
 
-    def swap_possession_team
-      @non_possession_team, @possession_team = @possession_team, @non_possession_team
-    end
-
     def calculate_outcome
       @outcome = :throw_in
     end

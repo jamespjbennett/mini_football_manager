@@ -13,10 +13,6 @@ module GameAction
       p "#{@non_possession_team[:name]} intercept the ball"
     end
 
-    def swap_possession_team
-      @non_possession_team, @possession_team = @possession_team, @non_possession_team
-    end
-
     def calculate_outcome
       @outcome = [:pass, :dribble].sample
     end
