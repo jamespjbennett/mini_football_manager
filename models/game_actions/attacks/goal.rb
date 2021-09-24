@@ -7,7 +7,7 @@ module GameAction
       commentary
       calculate_outcome
       swap_possession_team
-      terminate_sequence(:kick_off)
+      terminate_sequence(@outcome)
     end
 
     def print_commentary_text
