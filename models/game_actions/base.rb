@@ -31,5 +31,7 @@ module GameAction
       @non_possession_team
     end
 
+    # THIS SHOULD BE REVERTED
+
   end
 end
