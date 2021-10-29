@@ -13,7 +13,7 @@ module GameAction
 
     def terminate_sequence(start_action)
       @sequence.terminate(start_action)
-    end 
+    end
 
     def swap_possession_team
       @non_possession_team, @possession_team = @possession_team, @non_possession_team
@@ -30,6 +30,8 @@ module GameAction
     def non_possession_team
       @non_possession_team
     end
+
+    # THIS SHOULD BE REVERTED
 
   end
 end
