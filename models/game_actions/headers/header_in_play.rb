@@ -18,7 +18,9 @@ module GameAction
       shuffled_teams = [@possession_team, @non_possession_team].shuffle
       @possession_team = shuffled_teams[0]
       @non_possession_team = shuffled_teams[1]
-    end  
+    end
+
+    # TEST THIS
 
     def calculate_outcome
       @outcome = outcome_probability.max_by{|outcome,value| value}[0]
